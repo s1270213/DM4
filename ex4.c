@@ -19,5 +19,7 @@ int main(){
         }
     }
     printf("head:%d tail:%d\n",head,tail);
+    if(head>tail) printf("%s won\n",str);
+    else printf("%s lost\n",str);
     return 0;
 }
