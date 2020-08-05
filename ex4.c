@@ -4,21 +4,21 @@
 int main(){
     int i,num,head = 0,tail = 0;
     char str[8];
+    //名前を聞く
     printf("あなたは誰？");
     scanf("%s",str);
     printf("ハロー、%s\n",str);
     for(i = 0;i < 3;i++){
         num = rand()%2;
-        printf("%d\n",num);
         if(num%2 == 0){
-            printf("tail\n");
+            printf("Round %d: Heads\n",i+1);
             tail++;
         }else{
-            printf("head\n");
+            printf("Round %d: Tails\n",i+1);
             head++;
         }
     }
-    printf("head:%d tail:%d\n",head,tail);
+    printf("Heads: %d, Tails: %d\n",head,tail);
     if(head>tail) printf("%s won\n",str);
     else printf("%s lost\n",str);
     return 0;
